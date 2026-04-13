@@ -1,14 +1,88 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gabarito - Alinhamento em Tabelas</title>
-   
+
 </head>
+
 <body>
     <h1>Gabarito - Trabalhando com alinhamento</h1>
-    
-  
-</body>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            /* lagura */
+            width: 400px;
+            /* Altura */
+            height: 400px;
+            /* Para unir as linhas entre as celulas */
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            /* Alinhamento horizontal 
+                - center - centro
+                - left - esquerda
+                - right - direita
+            */
+            text-align: center;
+            /* Alinhamento vertical
+                - top - em cima
+                - bottom - em baixo
+                - middle - no centro
+            */
+            vertical-align: middle;
+        }
+
+        .numero {
+            text-align: right;
+        }
+    </style>
+    </head>
+
+    <body>
+        <h1>Minha primeira tabela</h1>
+        <!-- É utilzado para criar organização de dados -->
+        <!-- 
+        Hierarquia de tabelas (Simples)
+        Table = tabela
+            Table Row = Linha da tabela
+                Table Header = cabeçalho de tabela Data = dado da tabela Data = dado da tabela
+    -->
+        <table>
+            <tr>
+                <!-- Primeira linha -->
+                <td class="esquerda topo">A1<br>(esquerda)</td>
+                <td>B1<br>(padrao centro)</td>
+                <td class="direita topo">C1<br>(direita)</td>
+            </tr> <!-- Segunda linha -->
+            <tr>
+                <td class="topo esquerda ">A2<br>(topo)</td>
+                <td>B2<br>(padrao)</td>
+                <td class="baixo esquerda">C2<br>(baixo)</td>
+            </tr>
+            <tr>
+                <!-- Terceira linha -->
+                <td class="topo esquerda ">A3<br>(topo)</td>
+                <td class="baixo esquerda ">B3<br>(baixo)</td>
+                <td>C3<br>(padrao)</td>
+            </tr>
+            <tr>
+                <!-- Quarta linha -->
+                <td>A4</td>
+                <td class="direita baixo">1000<br>(numero a direita)</td>
+                <td>C4</td>
+            </tr>
+
+        </table>
+
+    </body>
+
 </html>
